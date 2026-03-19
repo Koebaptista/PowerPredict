@@ -78,6 +78,12 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 ```
+Caso de um erro no banco depois de você ter feito tudo certinho, e subido a planilha csv para treinar o modelo, rode: 
+
+```bash
+python manage.py makemigrations monitoramento
+python manage.py migrate
+```
 
 #### 2.4 Iniciar o servidor Django
 ```bash
@@ -185,6 +191,13 @@ python manage.py runserver
 | `Modelo não encontrado` | Execute o treinamento antes de usar previsão ou análise de CSV |
 | `Tabela não existe` | Rode `python manage.py migrate` novamente |
 | Porta 8000 ocupada | `python manage.py runserver 8001` e atualize a URL no `api.js` |
+
+Caso de um erro no banco depois de você ter feito tudo certinho, e subido a planilha csv para treinar o modelo, rode: 
+
+```bash
+python manage.py makemigrations monitoramento
+python manage.py migrate
+```
 
 ---
 

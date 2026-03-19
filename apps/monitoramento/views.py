@@ -147,11 +147,13 @@ def analisar_csv_api(request):
         )
 
     except FileNotFoundError as e:
+        print("Erro inesperado:", e) 
         return Response(
             {"erro": str(e), "dica": "Treine o modelo primeiro via POST /api/treinar/"},
             status=status.HTTP_400_BAD_REQUEST
         )
     except Exception as e:
+        print("Erro:", e)  
         return Response(
             {"erro": str(e)},
             status=status.HTTP_400_BAD_REQUEST
